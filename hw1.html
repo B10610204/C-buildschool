@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        div{
+          width: 1200px;
+          margin: 0 auto;
+          background-color: pink;
+        }
+        .total img{
+            width: 100%;
+        }
+        .box1{
+            display: flex;
+        }
+        .box1 img{
+            width: 570px;
+            margin: 15px;
+            
+        }
+        .box1p1{
+            position: relative;
+        }
+        .box1p2{
+            
+            position: relative;
+        }
+        .cart{
+            color: white;
+            margin: 15px;
+            text-align: center;
+            position: absolute;
+            bottom: 4px;
+            left: 0px;
+            width: 570px;
+            height: 40px;
+            line-height: 40px;
+            background-color: black;
+            opacity: 0;
+        }
+        .box1p1:hover .cart{
+            opacity: .5;
+        }
+        .box1p2:hover .cart{
+            opacity: .5;
+        }
+       
+
+      
+    </style>
+</head>
+
+<body>
+    <div class="total">
+        <img src="/CSS.0315作業圖片/first.webp"alt="">
+    </div>
+
+    <div class="box1">
+        <div class="box1p1">
+            <img src="/CSS.0315作業圖片/1.webp" alt="">
+            <span class=cart>加入購物車</span>
+        </div>
+        <div class="box1p2">
+            <img src="/CSS.0315作業圖片/2.webp" alt="">
+            <span class=cart>加入購物車</span>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
