@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+     
+        .Advantage_right{
+            padding-top: 36px;
+            width: 960px;
+            height: 776px;
+            /* background-color: pink; */
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 auto 108px;
+            
+        }
+        .Advantage_right a{
+            width: 695px;
+            height: 430px;
+            position: absolute;
+            z-index: 100;
+            margin: auto;
+            left: 80px;
+            right: 0;
+            top: 150px;
+            z-index: 100;
+        }
+        .colorbox_right{
+            width: 430px;   
+            height: 290px;
+            background-color: #eeeeee;
+        }
+        .joybox_right{
+            width: 355px;
+            height: 358px;
+            background-color: red;
+            position: relative;
+            top: -36px;
+            z-index: 200;
+        }
+        .Advantageone_txt_right{
+            width: 682px;
+            height: 275px;
+            background-color: pink;
+            position: absolute;
+            left: 80px;
+            bottom: 0;
+            z-index: 100;
+        }
+        .joybox_title_right{
+            font-size: 30px;
+            display: flex;
+            justify-content: space-around;
+            height: 30%;
+            width: 100%;
+            color: white;
+        }
+        .joybox_txt_right{
+            height: 70%;
+            width: 100%;
+            font-size: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: black;
+            color: white;
+        }
+        .joybox_txt_right h3{
+            font-size: 20px;
+        }
+        .joybox_txt_right p{
+            padding-top: 10px;
+            line-height: 35px;
+        }
+        .joybox_title_num_right{
+            font-size: 100px;
+            transform: rotate(90deg);
+        }
+
+
+        .Advantageone_txt_right{
+           
+            background-color:rgb(158, 158, 158);
+            padding-left: 20px;
+        }
+        .Advantageone_txt_title_right{
+            padding-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .Advantageone_txt_title_right.line h2{
+            display: inline-block;
+            font-size: 18px;
+            color: rgb(190, 37, 37);
+        }
+        .Advantageone_txt_title_right.line span{
+            display: inline-block;
+            width: 60%;
+            height: 3px;
+            background-color: red;
+        }
+        .Advantageone_txt_right h3{
+            font-size: 18px;
+            color: white;
+            background-color: black;
+            display: inline-block;
+            padding: 4px;
+            border-radius: 5px;
+        }
+        .Advantageone_txt_right li{
+            padding: 0;
+        }
+
+        .Advantageone_txt_right.last{
+            height: 198px;
+            bottom: 60px;
+        }
+
+        .pic_right{
+            position: absolute;
+            top: 50%;
+            right: -3%;
+            width: 57px;
+            height: 36px;
+            background-image: url(https://www.toyota.com.tw/asset/img/tech_tnga/video-icon.png?73425069);
+            z-index: 300;
+        }
+/* ------------------------------------右邊 */
+.Advantage_left{
+            padding-top: 61px;
+            width: 960px;
+            height: 654px;
+            /* background-color: pink; */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap-reverse;
+            justify-content: space-between;
+            margin: 0 auto 108px;
+        }   
+        .joybox_left{
+            width: 355px;
+            height: 358px;
+            background-color: red;
+            left: 605px;
+            top: -61px;
+            z-index: 200;
+        }
+        .joybox_title_left{
+            font-size: 30px;
+            display: flex;
+            justify-content: space-around;
+            height: 30%;
+            width: 100%;
+            color: white;
+        }
+        .joybox_txt_left{
+            height: 70%;
+            width: 100%;
+            font-size: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: black;
+            color: white;
+        }
+        .joybox_txt_left h3{
+            font-size: 20px;
+        }
+        .joybox_txt_left p{
+            padding-top: 10px;
+            line-height: 35px;
+        }
+        .joybox_title_num_left{
+            font-size: 100px;
+            transform: rotate(90deg);
+        }
+        
+        .Advantage_left a{
+            width: 695px;
+            height: 430px;
+            position: absolute;
+            z-index: 100;
+            margin: auto;
+            left: 10px;
+            top: 130px;
+            z-index: 100;
+        }
+
+        .Advantageone_txt_left{
+            width: 682px;
+            height: 175px;
+            background-color: pink;
+            
+            left:-96px;
+            bottom: 0;
+            z-index: 100;
+            background-color:rgb(158, 158, 158);
+            padding-left: 20px;
+        }
+        
+  
+       .Advantageone_txt_title_left{
+           padding-top: 10px;
+           display: flex;
+           align-items: center;
+       }
+       .Advantageone_txt_title_left.line h2{
+           display: inline-block;
+           font-size: 18px;
+           color: rgb(190, 37, 37);
+       }
+       .Advantageone_txt_title_left.line span{
+           display: inline-block;
+           width: 60%;
+           height: 3px;
+           background-color: red;
+       }
+       .Advantageone_txt_left h3{
+           font-size: 18px;
+           color: white;
+           background-color: black;
+           display: inline-block;
+           padding: 4px;
+           border-radius: 5px;
+       }
+       .Advantageone_txt_left li{
+           padding: 0;
+       }
+       .colorbox_left{
+            width: 518px;   
+            height: 413px;
+            background-color: #eeeeee;
+            position: absolute;
+            top: 61px;
+            right: 50px;
+        }
+        .pic_left{
+            position: absolute;
+            top: 50%;
+            left: -3%;
+            width: 57px;
+            height: 36px;
+            background-image: url(https://www.toyota.com.tw/asset/img/tech_tnga/video-icon.png?73425069);
+            z-index: 300;
+        }
+/* ----------------------------title */
+        .title{
+            width: 960px;
+            height: 200px;
+            /* background-color: pink  ; */
+            margin: 30px auto 60px;
+        }
+        .title h1{
+            width: 100%;
+            height: 62px;
+            text-align: center;
+        }
+        .underlinebox{
+            display: flex;
+        }
+        .title span{
+            width: 38px;
+            height: 4px;
+            display: inline-block;
+            background-color: black;
+            margin: auto;
+        }
+        .titlebox{
+            width: 100%;
+            height: 134px;
+           
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .titlebox h2{
+            text-align: center;
+            width: 184px;
+            height: 36px;
+            
+            overflow: hidden;
+            position: relative;
+        }
+        .titlebox h2 div{
+            width: 184px;
+            height: 36px;
+            position: absolute;
+            top: 90%;
+            left: 0;
+            background-color: red;
+            color: white;
+            transition: .1S;
+        }
+        .titlebox h2:hover div{
+            top: 0;
+            z-index: -1;
+        }
+        .titlebox h2:hover {
+            color: white;
+        }
+       
+       
+    </style>
+
+</head>
+
+<body>
+
+    <div class="title">
+        <h1>五大優勢</h1>
+        <div class="underlinebox">
+            <span></span>
+        </div>
+        <div class="titlebox">
+            <h2>
+                操控樂趣
+                <div></div>
+            </h2>
+            <h2>安全守護
+                <div></div>
+            </h2>
+            <h2>乘坐舒適
+                <div></div>
+            </h2>
+            <h2>以人為本
+                <div></div>
+            </h2>
+            <h2>引以為傲
+                <div></div>
+            </h2>
+        </div>
+    </div>
+
+
+
+    <div class="Advantage_right">
+        <div class="joybox_right">
+            <div class="joybox_title_right">
+                <div class="joybox_title_num_right">01</div>
+                <h1 class="joybox_title_txt_right">操控樂趣</h1>
+            </div>
+            <section class="joybox_txt_right">
+                <h3>人人滿意的駕駛體驗</h3>
+                <p>透過最佳重量分配，實現平順起步、直線穩定加速，過彎同時保持車身平穩，
+                    帶給駕駛更靈敏的道路反饋，享受隨心馳騁的行駛快感。</p>
+            </section>
+        </div>
+        <a href="https://www.toyota.com.tw/tech_TNGA.aspx#/advantages">
+            <img src="first.png" alt="">
+            <span class="pic_right">
+                <a href="https://youtu.be/WH9kmoDw0fI"></a>
+            </span>
+        </a>
+           
+        
+        <div class="colorbox_right"></div>
+        <section class="Advantageone_txt_right">
+            <div class="Advantageone_txt_title_right line">
+                <h2>因為我們做了這些革新</h2>
+                <span></span>
+            </div>
+            <h3>低重心設計</h3>
+            <li>透過低重心設計，不僅呈現更低伏的外觀，更能減少車身前傾，保持高速行駛穩定性。</li>
+            <h3>車體剛性強化</h3>
+            <li>車身結構採用超高強度鋼材，提高車輛穩定性，同時藉由雷射強化焊接技術，大幅增加焊點數量，提升車身抗扭剛性，
+                強化駕馭穩定性及安全性。</li>
+            <h3>四輪獨立懸吊</h3>
+            <li>搭載全新四輪獨立懸吊設定，透過懸吊的高承載強度，保持輪胎抓地力，同時兼顧轉向靈敏度與清晰路感回饋，提升駕馭樂趣。</li>
+        </section>
+    </div>
+
+
+
+
+    <div class="Advantage_left">
+        <div class="joybox_left">
+            <div class="joybox_title_left">
+                <h1 class="joybox_title_txt_left">安全守護</h1>
+                <div class="joybox_title_num_left">02</div>
+            </div>
+            <section class="joybox_txt_left">
+                <h3>行車更安心的高剛性車體</h3>
+                <p>您的愛車會妥善保護您，強悍穩固的車身可以使您安全無虞。世界級的安全科技讓您輕鬆自如享受旅程、毫無後顧之憂。</p>
+            </section>
+        </div>
+        
+        <a href="https://www.toyota.com.tw/tech_TNGA.aspx#/advantages">
+            <img src="two.png" alt="">
+            <span class="pic_left">
+                <a href="https://youtu.be/WH9kmoDw0fI"></a>
+            </span>
+        </a>
+        <section class="Advantageone_txt_left">
+            <div class="Advantageone_txt_title_left line">
+                <h2>因為我們做了這些革新</h2>
+                <span></span>
+            </div>
+            <h3>主動安全</h3>
+            <li>以先進的TSS系統，主動偵測路況，輔助駕駛判斷路況並維持行車安全</li>
+            <h3>被動安全</h3>
+            <li>堅固的高剛性車體，使用熱沖壓材料的高強度況扭鋼板，強化座艙對意外事故的保護力。</li>
+        </section>  
+        <div class="colorbox_left">
+
+        </div>
+    </div>
+    
+    
+    <div class="Advantage_right">
+        <div class="joybox_right">
+            <div class="joybox_title_right">
+                <div class="joybox_title_num_right">03</div>
+                <h1 class="joybox_title_txt_right">乘坐舒適</h1>
+            </div>
+            <section class="joybox_txt_right">
+                <h3>令人放鬆舒適的車室空間</h3>
+                <p>車室空間設計著重人體工學，透過方向盤、踏板等位置優化，追求更舒適的駕駛位置，並以新型座椅設計，提高座椅包覆性，致力實現長途駕駛不疲勞的舒適駕馭體驗。</p>
+            </section>
+        </div>
+        <a href="https://www.toyota.com.tw/tech_TNGA.aspx#/advantages">
+            <img src="third.png" alt="">
+            <span class="pic_right">
+                <a href="https://youtu.be/WH9kmoDw0fI"></a>
+            </span>
+        </a>
+        <div class="colorbox_right"></div>
+        <section class="Advantageone_txt_right">
+            <div class="Advantageone_txt_title_right line">
+                <h2>因為我們做了這些革新</h2>
+                <span></span>
+            </div>
+            <h3>駕駛位置最佳化</h3>
+            <li>針對駕駛位置進行徹底的修改，讓駕馭者可以如同握手般自然且舒適地操縱方向盤。</li>
+            <h3>駕馭視野佳</h3>
+            <li>考量駕駛作進車內的高度，透過前擋風玻璃位置的調整，達到盲區極小化，使駕駛視野更開闊，同步提升駕馭安全。</li>
+            <h3>更寧靜的車室</h3>
+            <li>採用最新三層結構的隔音材料，與引擎、變速箱的零件改革，將座艙的震動抑制在最小限度，提供乘客安靜的感受。</li>
+        </section>
+    </div>
+
+    <div class="Advantage_left">
+        <div class="joybox_left">
+            <div class="joybox_title_left">
+                <h1 class="joybox_title_txt_left">以人為本</h1>
+                <div class="joybox_title_num_left">04</div>
+            </div>
+            <section class="joybox_txt_left">
+                <h3>使用者導向的貼心設計</h3>
+                <p>藉由高度人性化的介面整合傳遞車輛資訊
+                    豐富日常駕駛體驗。從提升油耗表現到行李
+                    廂空間最適化,均細心考量,更加貼近使用
+                    者真正所需與習慣,並給予即時回應。</p>
+            </section>
+        </div>
+        
+        <a href="https://www.toyota.com.tw/tech_TNGA.aspx#/advantages">
+            <img src="four.png" alt="">
+            <span class="pic_left">
+                <a href="https://youtu.be/WH9kmoDw0fI"></a>
+            </span>
+        </a>
+        <section class="Advantageone_txt_left">
+            <div class="Advantageone_txt_title_left line">
+                <h2>因為我們做了這些革新</h2>
+                <span></span>
+            </div>
+            <h3>優異油耗表現</h3>
+            <li>以 AURIS為例,更強勁的高效引擎將熱效率提升至40%,達到世界級水準,屢屢突破燃油效率新境界</li>
+            <h3>行李箱空間最適化</h3>
+            <li>以 PRIUS為例,透過將電池位置移到後座下方,譲行李廂擁有更大的空間。</li>
+        </section>  
+        <div class="colorbox_left">
+
+        </div>
+    </div>
+
+
+    <div class="Advantage_right">
+        <div class="joybox_right">
+            <div class="joybox_title_right">
+                <div class="joybox_title_num_right">05</div>
+                <h1 class="joybox_title_txt_right">引以為傲</h1>
+            </div>
+            <section class="joybox_txt_right">
+                <h3>極具吸引力的精心設計</h3>
+                <p>TNGA車款擁有讓人忍不住回頭的新潮外觀讓駕駛充滿自信的駕馭快!不僅讓車主能展現個人風格・也能讓擁有者都能引以為傲</p>
+            </section>
+        </div>
+        <a href="https://www.toyota.com.tw/tech_TNGA.aspx#/advantages">
+            <img src="five.png" alt="">
+            <span class="pic_right">
+                <a href="https://youtu.be/WH9kmoDw0fI"></a>
+            </span>
+        </a>
+        <div class="colorbox_right"></div>
+        <section class="Advantageone_txt_right last">
+            <div class="Advantageone_txt_title_right line">
+                <h2>因為我們做了這些革新</h2>
+                <span></span>
+            </div>
+            <h3>設計概念</h3>
+            <li>TNGA低重心設計・不僅呈現更低伏的運動化外觀更講究高品質內装的一致性。</li>
+            <h3>環保概念</h3>
+            <li>為了對環境保護盡一份心力,我們全面提升傳統引
+                、變速箱與油電複合動力的動力效能。</li>
+            
+        </section>
+    </div>
+
+
+
+</body>
+</html>
