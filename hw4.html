@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0.css.font-awesome.min.css ">
+    <title>側邊選單</title>
+    <script src="https://use.fontawesome.com/fa7210dc77.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        html,body{
+            height: 100%;
+        }
+        body{
+            background-color: #546377;
+        }
+        .side-menu{
+            width: 300px;
+            height: 100%;
+            background-image: linear-gradient( 0deg,pink,#c2196c);
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 50px 0px;
+            box-shadow: 10px 0 10px hsla(240, 40%, 15%, .6);
+            /* x軸 y軸 偏移 色彩 */
+            position: relative;
+            transform: translateX(-100%); 
+            transition: .3s;
+        }
+        .side-menu form{
+            display: flex;
+            margin: 0 10px 50px;
+            border-radius: 100px;
+            border:1px solid rgb(255, 255,255,.4);
+        }
+        .side-menu form input,.side-menu form button{
+            border: none;
+            padding: 5px 10px;
+            width: 230px; 
+            background-color: transparent;
+            color: white;   
+        }
+        .side-menu form button{
+            width: 50px;
+        }
+        .side-menu form input:focus,.side-menu form button:focus{
+            outline: none;
+        }
+        .side-menu label{
+            position: absolute;
+            width: 30px;
+            height: 60px;
+            background-color: #000;
+            color: #fff;
+            right: -30px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            line-height: 60px;
+            text-align: center;
+            font-size: 30px;
+            border-radius: 0 10px 10px 0;
+        }
+        #side-menu-switch{
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+        }
+        #side-menu-switch:checked + .side-menu{
+            transform: translateX(0);
+        }
+        #side-menu-switch:checked + .side-menu label .fa{
+            transform: translateX(-1);
+        }
+        .nav a{
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            position: relative;
+        }
+        .nav li + li a::before{
+            /* before在block會怎麼排? */
+            content: "";
+            position: absolute;
+            border-top:1px solid rgb(255, 255,255,.4);
+            left: 10px; 
+            right: 10px;
+            /* background-color: steelblue; */
+            top: 0;
+        }
+        .nav a .fa{
+            margin-right: -1.1em;
+            transform: scale(0);
+            transition: .3s;
+        }
+        .nav li:hover .fa
+        {
+            margin-right: 0;
+            transform: scale(1);
+        }
+        .nav li:hover > a{
+            /* >限制在下層 */
+            background-color: pink;
+        }
+        .nav li{
+            position: relative;
+        }
+        .nav ul{
+            display: none;
+            position: absolute;
+            width: 300px;
+            left: 100%;
+            background-color: rgba(255, 255, 255, .2);
+            box-shadow: 5px 5px 10px #000;
+            top: 5px;
+        }
+        .nav li:hover > ul{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="checkbox" id="side-menu-switch">
+
+    <div class="side-menu">
+       <form action="">
+           <input type="search" placeholder="請輸入關鍵字">
+           <button><i class="fa fa-search" aria-hidden="true"></i></button>
+       </form>
+       <ul class="nav">
+           <li>
+            <!-- .nav li + li a::before -->
+               <a href="#" class="test">
+                   <i class="fa fa-users" aria-hidden="true"></i>
+                   鐵人賽</a>
+                <ul>
+                    <li>
+                        <a href="#">測試</a>
+                        <ul>
+                            <li><a href="#">day1</a></li>
+                            <li><a href="#">day2</a></li>
+                            <li><a href="#">day3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">測試</a>
+                        <ul>
+                            <li><a href="#">day1</a></li>
+                            <li><a href="#">day2</a></li>
+                            <li><a href="#">day3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">測試</a>
+                        <ul>
+                            <li><a href="#">day1</a></li>
+                            <li><a href="#">day2</a></li>
+                            <li><a href="#">day3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">測試</a>
+                        <ul>
+                            <li><a href="#">day1</a></li>
+                            <li><a href="#">day2</a></li>
+                            <li><a href="#">day3</a></li>
+                        </ul>
+                    </li>
+                   
+                </ul>
+           </li>
+           <li>
+               <a href="#">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                   暴力班
+                </a>
+           </li>
+           <li>
+               <a href="#">
+                   <i class="fa fa-users" aria-hidden="true"></i>
+                   RWD</a>
+           </li>
+           <li>
+               <a href="#">
+                <i class="fa fa-users" aria-hidden="true"></i>
+                   金魚網頁</a>
+           </li>
+           <li>
+               <a href="#">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                   金魚切版</a>
+           </li>
+       </ul>
+       <label for="side-menu-switch">
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+       </label>
+
+    </div>
+
+
+</body>
+</html>
