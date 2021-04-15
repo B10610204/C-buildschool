@@ -1,0 +1,16 @@
+{
+    "firstname":"Victor",
+    "height":173,
+    "weight": 59,
+    "email": "iop013241@gmail.com",
+    "city":{
+        "通訊地址":"新竹",
+        "戶籍地址":"新竹"
+    },
+    "phone":{
+        "市話":"03-5200601",
+        "行動電話":"0958970418"
+    },
+    "cars":["BMW","Nissan GT-R", "Audi"] 
+
+}

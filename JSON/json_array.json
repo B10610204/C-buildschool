@@ -1,0 +1,51 @@
+[
+    {
+        "firstname":"Victor",
+        "height":173,
+        "weight": 59,
+        "email": "iop013241@gmail.com",
+        "city":{
+            "通訊地址":"新竹",
+            "戶籍地址":"新竹"
+        },
+        "phone":{
+            "市話":"03-5200601",
+            "行動電話":"0958970418"
+        },
+        "cars":["BMW","Nissan GT-R", "Audi"] 
+    
+    },
+    {
+        "firstname":"Marry",
+        "height":172,
+        "weight": 58,
+        "email": "pop23009@gmail.com",
+        "city":{
+            "通訊地址":"美國",
+            "戶籍地址":"美國"
+        },
+        "phone":{
+            "市話":"03-5200501",
+            "行動電話":"0951314520"
+        },
+        "cars":["Bike","bus", "train"] 
+    
+    },
+    {
+        "firstname":"測試",
+        "height":158,
+        "weight": 50,
+        "email": "j330388@gmail.com",
+        "city":{
+            "通訊地址":"新竹",
+            "戶籍地址":"新竹"
+        },
+        "phone":{
+            "市話":"03-5200429",
+            "行動電話":"0958120618"
+        },
+        "cars":["BMW","bus", "walk"] 
+    
+    }
+
+]
