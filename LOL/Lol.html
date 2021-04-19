@@ -166,14 +166,11 @@
                     modal.querySelector("h5").innerText = championKeys[index];
                     
                    
-                    modal.querySelector("#loldescript").innerHTML += `HP:${datatemp[championKeys[index]].stats.hp} <br>`;
-                    modal.querySelector("#loldescript").innerHTML += `Movespeed:${datatemp[championKeys[index]].stats.movespeed} <br>`;
-                    modal.querySelector("#loldescript").innerHTML += `Armor:${datatemp[championKeys[index]].stats.armor} <br>`;
-                    modal.querySelector("#loldescript").innerHTML += `spellblock:${datatemp[championKeys[index]].stats.spellblock} <br>`;
-                    modal.querySelector("#loldescript").innerHTML += `Attackrange:${datatemp[championKeys[index]].stats.attackrange} <br>`;
+                    modal.querySelector("#loldescript").innerHTML = `HP:${datatemp[championKeys[index]].stats.hp} <br>Movespeed:${datatemp[championKeys[index]].stats.movespeed} <br> Armor:${datatemp[championKeys[index]].stats.armor} <br>spellblock:${datatemp[championKeys[index]].stats.spellblock} <br>Attackrange:${datatemp[championKeys[index]].stats.attackrange}`;
                    
-                        
-                        
+                   
+
+                    
                     
                    
                     modal.querySelector("#lolImage").src = `lol/${datatemp[championKeys[index]].image.full}`;
