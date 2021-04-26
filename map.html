@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Document</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
@@ -87,7 +87,8 @@
                 const infowindow = new google.maps.InfoWindow({
                     content: `城市名稱:${item.City},<br>鄉鎮名稱:${item.Town},<br>用水量:<br>${item.Water.join("<br>")}`
                 });
-                console.warn(infowindow)
+                console.warn(infowindow.content)
+                
                 // 丟到空陣列裡
                 infos.push(infowindow);
                 marker.addListener("click", () => {
