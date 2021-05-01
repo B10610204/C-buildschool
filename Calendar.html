@@ -131,6 +131,7 @@
         let start_day = 0;
         let bool = false;
         let btn_month = 0;
+        let current_year = 2021;
 
         //設定現在月份
         let date = new Date();
@@ -141,7 +142,7 @@
         display_month.innerText = `${month[current_month - 1]}`;
 
         //設定日曆格子裡需要的資料
-        setdatecount(current_month);
+        setdatecount(current_year,current_month);
        
         settable();
         //設定更改月份事件
@@ -149,10 +150,17 @@
         btn_next.addEventListener("click", function () {
             
             createday = -1;
-            current_month++;
+            if(current_month == 12)
+            {
+                current_year++;
+                current_month = 1
+            }
+            else
+                current_month++;
+            
             day_area.innerHTML = "";
             display_month.innerText = `${month[current_month - 1]}`;
-            setdatecount(current_month);
+            setdatecount(current_year,current_month);
             
             settable();
             setItem();
@@ -160,10 +168,17 @@
         let btn_last = document.getElementById("btn-last");
         btn_last.addEventListener("click", function () {
             createday = -1;
-            current_month--;
+            if(current_month == 1)
+            {
+                current_year--;
+                current_month = 12
+            }
+            else
+                current_month--;
+            
             day_area.innerHTML = "";
             display_month.innerText = `${month[current_month - 1]}`;
-            setdatecount(current_month);
+            setdatecount(current_year,current_month);
            
             settable();
             setItem();
@@ -253,11 +268,11 @@
         }
 
 
-        function setdatecount(month) {
-            let date = new Date(2021, month-1, 1);
-            let date_count = new Date(2021, month, 0);
+        function setdatecount(year,month) {
+            let date = new Date(year, month-1, 1);
+            let date_count = new Date(year, month, 0);
             
-            let last_date = new Date(2021, month - 1, 0);
+            let last_date = new Date(year, month - 1, 0);
             last_countday = last_date.getDate(); //上月份有幾天
             weekday = date.getDay(); //禮拜幾開始
             countday = date_count.getDate();//月份有幾天
