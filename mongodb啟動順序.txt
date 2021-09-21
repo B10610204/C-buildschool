@@ -1,0 +1,50 @@
+國翔學長RL 2021/7/22
+
+
+執行相關指令，如果三台電腦都要執行的會特別標註。
+NOTE: 特別重要，接下來的順序都不能錯，開啟順序錯了就要將所有Data跟log裡面的資料全部砍掉在重開一次，所有的執行都要將目錄cd至mongo的資料夾。
+
+config設定(三台電腦都要執行)
+mongod --config "C:\mongodb\config\mogod_Config.conf"
+
+登入要當作Primary的IP在進入設定的config port
+mongo --host HomePC --port 27018  🡪  host為該電腦的裝置名稱，可以從本機設定中查到
+設定config與副本集
+use admin  🡪 設定該IP為primary
+rs.initiate({
+_id:"configset", 🡪 與config.conf裡的replSetName名字相同
+configsvr:true, 🡪 設定啟動config
+members:[
+{_id:0,host:"140.125.84.77:27018"}, 🡪 格式為<IP>:<port>，port為config中所設定的
+{_id:1,host:"140.125.84.88:27018"},
+{_id:2,host:"140.125.84.106:27018"},
+]})
+
+分片設定
+有幾個分片就要設定幾次
+mongod --config "C:\mongodb\shard1\shard1.conf"(三台電腦都要)
+mongod --config "C:\mongodb\shard2\shard2.conf"(三台電腦都要)
+
+分片副本集設定
+Shard有幾個就要設定幾次，會改的部分為登入port與_id
+登入設為primary的shard port
+mongo --port 27020 
+
+use admin
+rs.initiate({
+_id:"shard1", 🡪與shard1.conf的replSetName設定相同
+members:[
+{_id:0,host:"140.125.84.77:27020"},
+{_id:1,host:"140.125.84.88:27020"},
+{_id:2,host:"140.125.84.106:27020"},
+]})
+
+mongos設定，可以決定到底要開幾個入口，在哪個IP開就表示那個IP有入口
+mongos --config "C:\mongodb\mongos.conf"
+
+mongo --port 27019 🡪 mongo.conf裡所設定的port
+
+登入Mongos後設定分片(幾個分片就設幾次，port跟分片副本集設定的一樣)
+use admin
+sh.addShard('shard1/140.125.84.77:27020,140.125.84.88:27020,140.125.84.106:27020')
+sh.addShard('shard2/140.125.84.77:27021,140.125.84.88:27021,140.125.84.106:27021')
